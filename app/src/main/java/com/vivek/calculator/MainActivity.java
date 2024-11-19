@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView screen = findViewById(R.id.screen);
 
-        screen.setText("Ram Ram 🚩🛕");
+        screen.setText("Welcome");
         new Handler().postDelayed(() -> {
             screen.setText("0");
         }, 1000);
