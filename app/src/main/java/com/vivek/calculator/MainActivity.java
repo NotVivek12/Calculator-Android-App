@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView screen = findViewById(R.id.screen);
 
-        screen.setText("Ram Ram 🚩🛕");
+        screen.setText("Welcome");
         new Handler().postDelayed(() -> {
             screen.setText("0");
         }, 1000);
@@ -69,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
         for (Button b : nums) {
             b.setOnClickListener(view -> {
-                if(!screen.getText().toString().equals("0"))
+                if(screen.getText().toString().equals("00"))
+                    screen.setText(b.getText().toString());
+                else if(!screen.getText().toString().equals("0"))
                     screen.setText(screen.getText().toString() + b.getText().toString());
                 else
                     screen.setText(b.getText().toString());
